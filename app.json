@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/goods/index/index",
+    "pages/enter/enter",
+    "pages/index/index",
+    
+    "pages/goods/categoryroom/categoryroom",
+    "pages/goods/productlist/productlist",
+    "pages/cart/index/index",
+    "pages/user/phonenumber/phonenumber",
+    "pages/user/index/index",
+    "pages/user/order/order",
+    "pages/user/nopay/nopay",
+    "pages/user/nodelivery/nodelivery",
+    "pages/user/noreceiving/noreceiving",
+    "pages/user/returnback/returnback",
+    "pages/user/coupon/coupon",
+    "pages/user/attention/attention",
+    "pages/user/history/history",
+    "pages/user/address/address",
+    "pages/user/setinfo/setinfo",
+    "pages/other/authorize/authorize",
+    "pages/other/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小牛衣柜",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav/home-off.png",
+        "selectedIconPath": "images/nav/home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/goods/index/index",
+        "iconPath": "images/nav/classify-off.png",
+        "selectedIconPath": "images/nav/classify-on.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/index/index",
+        "iconPath": "images/nav/cart-off.png",
+        "selectedIconPath": "images/nav/cart-on.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/index/index",
+        "iconPath": "images/nav/my-off.png",
+        "selectedIconPath": "images/nav/my-on.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

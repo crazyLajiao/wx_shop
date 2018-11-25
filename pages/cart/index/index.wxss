@@ -1,0 +1,28 @@
+/* pages/cart/index/index.wxss */
+.top{
+  text-align: center;
+  font-size:16rpx;
+  width:100%;
+  padding-bottom:4rpx; 
+  color:#ccc;
+  border-bottom: 1rpx solid #ccc;
+}
+.none-img{
+  display: block;
+  width:200rpx;
+  height:240rpx;
+  margin-top: 30%;
+}
+.none-text{
+  display: block;
+  font-size: 36rpx;
+  margin-top: 70rpx;
+  margin-bottom:70rpx;
+}
+.none-btn{
+  display: block;
+  font-size:36rpx;
+  color:#e64340;
+  text-align: center;
+  border:2rpx solid #e64340; 
+}

@@ -1,0 +1,144 @@
+/* pages/index/index.wxss */
+.left-icon{
+  left:30rpx;
+}
+.right-icon{
+  right:30rpx;
+}
+.topnav{
+  background: linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 0));
+}
+.type-container{
+  width:100%;
+  height:88rpx;
+  background-color: #fff;
+  overflow:hidden;
+  margin-top:90rpx;
+}
+.type-navbar{
+  white-space:nowrap;
+  height:88rpx;
+  width:100%;
+  background-color: #fff;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.type-box{
+  width:160rpx;
+  box-sizing:content-box;
+  font-size:28rpx;
+  font-weight:500;
+  line-height:84rpx;
+  text-align:center;
+  display: inline-block;
+  overflow: hidden;
+}
+.type-navbar-item{
+  border-bottom:4rpx solid #fff;
+}
+.type-navbar-on{
+  color:#d34ba8;
+  border-bottom:4rpx solid #d34ba8;
+}
+.swiper-container{
+  margin-top:20rpx;
+  width:100%;
+  height:480rpx;
+}
+.swiper-container image{
+  width:100%;
+  height:100%;
+}
+.operate-container{
+  margin-top:40rpx;
+  width:100%;
+  height:480rpx;
+}
+.operate-inner{
+  width:100%;
+  display: flex;
+  flex-wrap:wrap;
+}
+.operate-item{
+  width:25%;
+  height:200rpx;
+}
+.operate-item image{
+  width:100%;
+  height:100%;
+}
+.operate-show-container{
+  width: 828rpx;
+  margin-top:-20rpx;
+}
+.operate-show-item{
+  width:100%;
+  text-align: center;
+}
+.operate-show-item .operate-item-top{
+  width:100%;
+  height: 95rpx;
+  display: block;
+}
+.operate-show-item .operate-item-mid{
+  width:100%;
+  height:480rpx;
+  display: block;
+}
+.operate-show-item .operate-item-bottom{
+  width:45%;
+  height:234rpx;
+  margin:20rpx;
+}
+.brand-show-title{
+  margin-top:30rpx;
+  height:104rpx;
+}
+.title{
+  display: block;
+  width:100%;
+  text-align:center;
+  margin-top:30rpx;
+  margin-bottom:30rpx;
+  font-size:40rpx;
+  font-weight:500;
+}
+.brand-item{
+  width:100%;
+  height:396rpx;
+  margin-bottom:100rpx;
+}
+.brand-item .brand-page{
+  width:100%;
+  height:100%;
+}
+.brand-item .brand-desc{
+  width:100%;
+  height:100%;
+  line-height: 100%;
+  padding-left:7%;
+  position: relative;
+  
+}
+.brand-item .brand-name{
+  display: inline-block;
+  position: absolute;
+  width:70%;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  margin-top:20rpx;
+  font-size:36rpx;
+  font-weight:600;
+}
+.brand-item .time{
+  display: inline-block;
+  position: absolute;
+  left:80%;
+  margin-top:20rpx;
+  font-size:24rpx;
+  color:#98989f;
+}

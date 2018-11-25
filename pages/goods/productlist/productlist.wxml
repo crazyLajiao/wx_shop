@@ -1,0 +1,27 @@
+<!--pages/goods/productlist/productlist.wxml-->
+<view class='container'>
+  <view class='top-nav'>
+  <!-- 有无库存 价格升降序 折扣升降序条件筛选是叠加的 -->
+    <view class='nav-item store' bindtap='changeStock'>有货商品</view>
+    <view class='nav-item price' bindtap='changePrice'>价格</view>
+    <view class='nav-item discount' bindtap='changeDiscount'>折扣</view>
+    <view class='nav-item filter'>筛选</view>
+  </view>
+  <view class='content'>
+    <block wx:for="{{filterList}}" wx:key="id">
+      <view class='content-item'>
+        <view class='mask' hidden="{{item.stock==-1?false:true}}">已抢光</view>
+        <view class='item-img'>
+          <image src="{{item.smallImage}}"></image>
+        </view>
+        <view class='item-name'>{{item.productName}}</view>
+        <view class='price'>
+          <text class='new'>￥{{item.vipshopPrice}}</text>
+          <text class='old'>￥{{item.marketPrice}}</text>
+          <view class='disc'>{{item.vipDiscount}}折</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+

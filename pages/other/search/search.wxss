@@ -1,0 +1,26 @@
+/* pages/other/search/search.wxss */
+.search-input{
+  width: 532rpx;
+}
+.left-icon{
+  left:30rpx;
+}
+.right-icon{
+  right:30rpx;
+}
+.search{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute; 
+  top: 30rpx;
+  right: 40rpx;
+  overflow:visible;
+  background-color:transparent;
+  line-height:normal;
+  padding-right:0;
+  padding-left:0;
+}
+.search image{
+  width: 100%;
+  height: 100%;
+}

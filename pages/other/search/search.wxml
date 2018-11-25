@@ -1,0 +1,12 @@
+<!--pages/other/search/search.wxml-->
+<!-- 固定头部 -->
+<view class="header-input topnav">
+  <!-- 搜索条 -->
+  <input class="search-input" placeholder="搜索品牌或商品">
+    <icon class='left-icon' size='15' type='search'></icon> 
+    <icon class='right-icon' size='15' type='clear' bindtap='{{clearInputValue}}'></icon>
+  </input>
+  <button class='search' hover-class='none'>
+    <image src="/images/search.png"></image>
+  </button>
+</view>

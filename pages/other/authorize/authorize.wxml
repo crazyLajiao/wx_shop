@@ -1,0 +1,25 @@
+<!--pages/other/authorize/authorize.wxml-->
+<!-- <view class="container" wx:if="{{canIUse}}">
+    <form bindsubmit="bindSave">
+    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>1、同意当前小程序获取我的微信头像；</view>
+    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>2、同意当前小程序获取我的微信昵称等其他信息；</view>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="save-btn">授权登录</button>
+    </form>
+</view> -->
+<view wx:if="{{canIUse}}">
+    <view class='header'>
+        <image src='/images/wx.jpg'></image>
+    </view>
+ 
+    <view class='content'>
+        <view>申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+ 
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        授权登录
+    </button>
+</view>
+ 
+<view wx:else>请升级微信版本</view>
+

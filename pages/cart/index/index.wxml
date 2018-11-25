@@ -1,0 +1,15 @@
+<!--pages/cart/index/index.wxml-->
+<view class='container'>
+  <view class='top'>
+    配送至合肥市
+  </view>
+  <view class='content'>
+    <!-- <view wx:if="{{datas}}">
+    </view>
+    <view wx:else> -->
+      <image class='none-img' src="/images/nav/cart-off.png"></image>
+      <text class='none-text'>购物车空空如也</text>
+      <button class="none-btn" bindtap='goBack'>继续逛逛</button>
+    <!-- </view> -->
+  </view>
+</view>

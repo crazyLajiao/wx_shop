@@ -1,0 +1,32 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.wxParse-img {
+  display: block !important;
+}
+.header-input{
+  width: 690rpx;
+  padding: 18rpx 32rpx 40rpx;
+  position: fixed;
+  z-index: 1000;
+}
+.search-input{
+  width: 592rpx;
+  height: 60rpx;
+  border-radius: 100rpx;
+  font-size: 24rpx;
+  padding-left: 76rpx;
+  background-color: #ddd;
+  opacity: .7; 
+  position: relative;
+}
+.search-input icon{  
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
+}

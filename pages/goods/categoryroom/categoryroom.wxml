@@ -1,0 +1,73 @@
+<!--pages/goods/categoryroom/categoryroom.wxml-->
+<view class='container'>
+  <view class='topimg'>
+    <image src='/images/goods/catetop.jpg'></image>
+  </view>
+  <view class='midlist'>
+    <view class='title'>
+      <image src="{{midTitleImg1}}"></image>
+    </view>
+    <view class='list-box'>
+      <view class='list-item' wx:for="{{midList}}" wx:key="id">
+        <image class='item-img' src='{{item.img_url}}'></image>
+        <view class='item-name'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='midlist'>
+    <view class='title'>
+      <image src="{{midTitleImg2}}"></image>
+    </view>
+    <view class='list-container'>
+      <view class='list-nav'>
+        <block wx:for="{{listTitle}}" wx:key="id">
+          <view id="{{item.id}}" class='nav-item {{selectedId==item.id?"active":""}}' bindtap='changeNav'>
+            <view class='nav-img'>
+              <image src="{{item.img_url}}"></image>
+            </view>
+            <view class='nav-name'>{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+      <view class='list-content' hidden="{{selectedId=='2000'?'':true}}">
+        <view class='content-item' wx:for="{{knitList}}" wx:key="id">
+          <view class='item-img'><image src="{{item.img_url}}"></image></view>
+          <view class='item-desc'>{{item.name}}</view>
+          <view class='item-price'>
+            <text class='price'>￥{{item.price}}</text>
+            <del class='old-price'>￥{{item.price}}</del>
+          </view>
+          <button class='add-cart'>加入购物车</button>
+        </view>
+      </view>
+      <view class='list-content' hidden="{{selectedId=='2001'?'':true}}">
+        <view class='content-item' wx:for="{{flowerList}}" wx:key="id">
+          <view class='item-img'><image src="{{item.img_url}}"></image></view>
+          <view class='item-desc'>{{item.name}}</view>
+          <view class='item-price'>
+            <text class='price'>￥{{item.price}}</text>
+            <del class='old-price'>￥{{item.price}}</del>
+          </view>
+          <button class='add-cart'>加入购物车</button>
+        </view>
+      </view>
+      <view class='list-content' hidden="{{selectedId=='2002'?'':true}}">
+        <view class='content-item' wx:for="{{hoodieList}}" wx:key="id">
+          <view class='item-img'><image src="{{item.img_url}}"></image></view>
+          <view class='item-desc'>{{item.name}}</view>
+          <view class='item-price'>
+            <text class='price'>￥{{item.price}}</text>
+            <del class='old-price'>￥{{item.price}}</del>
+          </view>
+          <button class='add-cart'>加入购物车</button>
+        </view>
+      </view>
+      <view class='list-brand' hidden="{{selectedId=='2003'?'':true}}">
+        <view class='brand-item' wx:for="{{brandList}}" wx:key="id">
+          <view class='brand-img'><image src="{{item.mobile_image_one}}"></image></view>
+          <view class='brand-desc'>{{item.brand_discount}}{{item.brand_name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

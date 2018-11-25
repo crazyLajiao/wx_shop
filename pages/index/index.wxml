@@ -1,0 +1,92 @@
+<!--pages/index/index.wxml-->
+<!-- 固定头部 -->
+<view class='container'>
+  <view class="header-input topnav">
+    <!-- 搜索条 -->
+    <input class="search-input" placeholder="搜索品牌或商品" bindfocus="searchNav">
+      <icon class='left-icon' size='15' type='search'></icon> 
+      <icon class='right-icon' size='15' type='clear'></icon>
+    </input>
+  </view>
+  <view class='type-container'>
+    <scroll-view class='type-navbar' scroll-x="true">
+      <view class='type-box' wx:for="{{navbarItems}}" wx:key="id" bindtap='tabClick'>
+        <view id="{{item.categoryId}}" class='type-navbar-item {{activeId==item.categoryId? "type-navbar-on":""}}'>
+          {{item.name}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <swiper class='swiper-container' indicatorDots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banners}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item.picurl}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="operate-container">
+    <view class='operate-inner'>
+      <view class='operate-item'  bindtap='moreClass'>
+        <image src='/images/operate/female.jpg'></image>
+      </view>
+      <view class='operate-item'  bindtap='moreClass'>
+        <image src='/images/operate/makeup.jpg'></image>
+      </view>
+      <view class='operate-item'  bindtap='moreClass'>
+        <image src='/images/operate/mother.jpg'></image>
+      </view>
+      <view class='operate-item'  bindtap='moreClass'>
+        <image src='/images/operate/superise.jpg'></image>
+      </view>
+      <view class='operate-item'  bindtap='moreClass'>
+        <image src='/images/operate/shoe.jpg'></image>
+      </view>
+      <view class='operate-item'  bindtap='moreClass'>
+        <image src='/images/operate/sports.jpg'></image>
+      </view>
+      <view class='operate-item'  bindtap='moreClass'>
+        <image src='/images/operate/inner.jpg'></image>
+      </view>
+      <view class='operate-item' bindtap='moreClass'>
+        <image src='/images/operate/more.jpg'></image>
+      </view>
+    </view>
+  </view>
+  <view class='operate-show-container'>
+    <view class='operate-show-item'>
+      <image class='operate-item-top' src="/images/operate/itemtop1.jpg"></image>
+    </view>
+    <view class='operate-show-item' bindtap='goCategoryRoom'>
+      <image class='operate-item-mid' src="/images/operate/itemmid1.jpg"></image>
+    </view>
+     <view class='operate-show-item'>
+      <image class='operate-item-bottom' mode="scaleToFill" src="/images/operate/itembottom1.jpg"  bindtap='goCategoryRoom'></image>
+      <image class='operate-item-bottom' mode="scaleToFill" src="/images/operate/itembottom2.jpg"  bindtap='goCategoryRoom'></image>
+    </view>
+    <view class='operate-show-item'>
+      <image class='operate-item-top' src='/images/operate/itemtop2.jpg'></image>
+    </view>
+    <view class='operate-show-item' bindtap='goCategoryRoom'>
+      <image class='operate-item-mid' src='/images/operate/itemmid2.gif' ></image>
+    </view>
+    <view class='operate-show-item'>
+      <image class='operate-item-top' src='/images/operate/itemtop3.jpg'></image>
+    </view>
+    <view class='operate-show-item'  bindtap='goCategoryRoom'>
+      <image class='operate-item-mid' src='/images/operate/itemmid3.jpg'></image>
+    </view>
+    <view class='operate-show-item brand-show-title'>
+      <image class='operate-item-top' src='/images/operate/itemtop4.jpg'></image>
+    </view>
+    <text class='title'>今日特卖 · 每天早10点 晚8点上新</text>
+    <view class='brand-item' wx:for="{{brandItems}}" wx:key="id" bindtap='goProductList'>
+      <image class='brand-page' src="{{item.mobile_image_one}}"></image>
+      <view class='brand-desc'>
+        <text class='brand-name'>{{item.brand_discount}}  {{item.brand_name}}</text>
+        <text class='time'>剩2天</text>
+      </view>
+    </view>
+  </view>
+  
+</view>
+
