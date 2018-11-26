@@ -1,1 +1,38 @@
 /* pages/user/order/order.wxss */
+.top-nav{
+  width:100%;
+  height:72rpx;
+  display: flex;
+  justify-content: start;
+  font-size:36rpx;
+  margin-bottom:30rpx;
+}
+.top-nav .nav-item{
+  width:20%;
+  height:72rpx;
+  line-height: 72rpx;
+  border:1rpx solid #ccc;
+  text-align: center;
+}
+.top-nav .active{
+  color:#e64043;
+}
+.no-content .none-img{
+  display: block;
+  width:200rpx;
+  height:240rpx;
+  margin-top: 30%;
+}
+.no-content .none-text{
+  display: block;
+  font-size: 36rpx;
+  margin-top: 70rpx;
+  margin-bottom:70rpx;
+}
+.no-content .none-btn{
+  display: block;
+  font-size:36rpx;
+  color:#e64340;
+  text-align: center;
+  border:2rpx solid #e64340; 
+}

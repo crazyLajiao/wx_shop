@@ -1,0 +1,90 @@
+<!--pages/goods/productdetail/productdetail.wxml-->
+<view class='container'>
+  <view class='mask' hidden="{{data.stock>0?true:false}}">已抢光</view>
+  <swiper class='swiper-container' indicatorDots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{data.swiperList}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='info-top'>
+    <view class='info-name'>{{data.product_name}}</view>
+    <view class='info-price'>
+      <text class='new'>￥{{data.new_price}}</text>
+      <text class='old'>￥{{data.old_price}}</text>
+      <text class='discount'>{{data.discount}}</text>
+      <text class='sale'>销量: {{data.sale_count}}</text>
+    </view>
+    <view class='service'>
+      服务
+      <view class='serv-box' wx:for="{{data.service}}" wx:key="id">
+        <icon class='ico' type="success" size="15" color="#e64043"></icon>
+        <text class='serv'>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='info-mid'>
+    <view class='color'>
+      <text>衣服颜色</text>
+      <view class='col-box' wx:for="{{data.color}}" wx:key="id">
+        {{item}}
+      </view>
+    </view>
+    <view class='size'>
+      <text>衣服尺寸</text>
+      <view class='size-box' wx:for="{{data.size}}" wx:key="id">
+        {{item}}
+      </view>
+    </view>
+    <view class='number'>
+      <text class='num-title'>数量</text>
+      <view class='num-handle'>
+        <text class='operate'>-</text>
+        <text class='num'>1</text>
+        <text class='operate'>+</text>
+      </view>
+      <text class='stock-title'>库存</text>
+      <text class='stock-num'>{{data.stock}}</text>
+    </view>
+  </view>
+  <view class='info-bottom'>
+    <view class='shop-info'>
+      <view class='logo'><image src="{{data.shop_logo}}"></image></view>
+      <view class='shop-desc'>
+        <text class='shop-name'>{{data.shop_name}}</text>
+        <text class='shop-slogan'>{{data.shop_slogan}}</text>
+      </view>
+    </view>
+    <view class='nav'>
+      <view class='pictures_nav active'>图文详情</view>
+      <view class='productdetail_nav'>产品参数</view>
+      <view class='comments_nav'>买家评论(0)</view>
+    </view>
+    <view class='pictures_show'>
+      <view class='pic_box' wx:for="{{data.swiperList}}" wx:key="id">
+        <image src='{{item}}'></image>
+      </view>
+    </view>
+  </view>
+  <view class='fixed-operate'>
+    <view class='short customservice'>
+      <image mode="scaleToFill" src="/images/customservice.png"></image>
+      <text>客服</text>
+    </view>
+    <view class='short collect'>
+      <image src="/images/star.png"></image>
+      <text>收藏</text>
+    </view>
+    <view class='short cart'>
+      <image src="/images/cart.png"></image>
+      <text>购物车</text>
+    </view>
+    <view class='long addtocart'>
+      <text>加入购物车</text>
+    </view>
+    <view class='long buynow'>
+      <text>立即购买</text>
+    </view>
+  </view>
+</view>

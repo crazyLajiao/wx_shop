@@ -9,7 +9,7 @@
   </view>
   <view class='content'>
     <block wx:for="{{filterList}}" wx:key="id">
-      <view class='content-item'>
+      <view class='content-item' bindtap='goDetail'>
         <view class='mask' hidden="{{item.stock==-1?false:true}}">已抢光</view>
         <view class='item-img'>
           <image src="{{item.smallImage}}"></image>

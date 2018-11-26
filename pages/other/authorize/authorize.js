@@ -36,6 +36,9 @@ Page({
   login(){
     let that = this
     let token = wx.getStorageSync('token')
+    let pageStack = getCurrentPages()
+    let prePage = pageStack[pageStack.length-2].route
+    
     if(token){
       wx.request({
         url:app.globalData.api_url+'/user/check',
@@ -47,9 +50,15 @@ Page({
             wx.removeStorageSync('token')
             that.login()
           }else{
-            wx.switchTab({
-              url: '/pages/index/index',
-            })
+            // if(prePage=="pages/enter/enter"){
+              wx.switchTab({
+                url: '/pages/index/index',
+              })
+            // }else if(prePage=="pages/user/index/index"){
+              // wx.switchTab({
+              //   url: '/pages/user/index/index',
+              // })
+            // } 
           }
         }
       })
@@ -78,9 +87,15 @@ Page({
             wx.setStorageSync('token', res.data.data.token)
             wx.setStorageSync('uid', res.data.data.uid)
             // 回到原来的地方
-            wx.switchTab({
-              url: '/pages/index/index',
-            })
+            // if (prePage == "pages/enter/enter") {
+              wx.switchTab({
+                url: '/pages/index/index',
+              })
+            // } else if (prePage == "pages/user/index/index") {
+              // wx.switchTab({
+              //   url: '/pages/user/index/index',
+              // })
+            // } 
           }
         })
       }

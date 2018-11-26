@@ -1,2 +1,35 @@
 <!--pages/user/order/order.wxml-->
-<text>pages/user/order/order.wxml</text>
+<view class='container'>
+  <view class='top-nav'>
+    <view id="all" class='nav-item {{selectedId=="all"?"active":""}}' bindtap='click'>全部</view>
+    <view id="nopay"class='nav-item {{selectedId=="nopay"?"active":""}}' bindtap='click'>待付款</view>
+    <view id="nodel" class='nav-item {{selectedId=="nodel"?"active":""}}' bindtap='click'>待发货</view>
+    <view id="norec" class='nav-item {{selectedId=="norec"?"active":""}}' bindtap='click'>待收货</view>
+    <view id="nocom" class='nav-item {{selectedId=="nocom"?"active":""}}' bindtap='click'>待评价</view>
+  </view>
+  
+  <view class='content' wx:if="{{order}}">
+      fffffff
+  </view>
+  <view class='no-content' wx:if="{{(allOrder==false) && (selectedId=='all')}}">
+    <image class='none-img' src="/images/nav/cart-off.png"></image>
+      <text class='none-text'>您还没有订单</text>
+      <button class="none-btn" bindtap='goShopping'>继续逛逛</button>
+  </view>
+  <view class='no-content' wx:if="{{(nopayOrder==false) && (selectedId=='nopay')}}">
+    <image class='none-img' src="/images/user/pendingdelivery.png"></image>
+      <text class='none-text'>暂时没有订单</text>
+  </view>
+  <view class='no-content' wx:if="{{(nodeliveryOrder==false) && (selectedId=='nodel')}}">
+    <image class='none-img' src="/images/user/pendingdelivery2.png"></image>
+      <text class='none-text'>暂时没有订单</text>
+  </view>
+  <view class='no-content' wx:if="{{(noreceiveOrder==false) && (selectedId=='norec')}}">
+    <image class='none-img' src="/images/user/pendingdelivery3.png"></image>
+      <text class='none-text'>暂时没有订单</text>
+  </view>
+  <view class='no-content' wx:if="{{(nocommentOrder==false) && (selectedId=='nocom')}}">
+    <image class='none-img' src="/images/user/pendingdelivery4.png"></image>
+      <text class='none-text'>暂时没有订单</text>
+  </view>
+</view>

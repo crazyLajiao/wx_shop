@@ -39,6 +39,16 @@ Page({
       }
     })
   },
+  goDetail(){
+    wx.navigateTo({
+      url: '/pages/goods/productdetail/productdetail',
+    })
+  },
+  goProductList(){
+    wx.navigateTo({
+      url: '/pages/goods/productlist/productlist',
+    })
+  },
   onShow(){
     
   },

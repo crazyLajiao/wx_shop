@@ -37,7 +37,11 @@ Page({
       url: '/pages/other/search/search',
     })
   },
-  
+  goToProductList(){
+    wx.navigateTo({
+      url: '/pages/goods/productlist/productlist',
+    })
+  },
   scroll(e){
     if(e.detail.scrollTop>2850){
       this.setData({

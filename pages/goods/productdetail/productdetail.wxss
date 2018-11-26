@@ -1,0 +1,267 @@
+/* pages/goods/productdetail/productdetail.wxss */
+.container{
+  background-color: #ccc;
+}
+.mask{
+  position: absolute;
+  width:200rpx;
+  height:200rpx;
+  line-height: 200rpx;
+  top:300rpx;
+  left:50%;
+  margin-left:-80rpx;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.6);
+  color:#fff;
+  z-index:99;
+  text-align: center;
+
+}
+.swiper-container{
+  width:100%;
+  height:850rpx;
+}
+.swiper-container image{
+  width:100%;
+  height:100%;
+}
+.info-top{
+  width:100%;
+  padding:20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.info-top .info-name{
+  width:80%;
+  height:80rpx;
+  font-size:34rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2;
+}
+.info-top .info-price{
+  width:100%;
+  height:80rpx;
+  line-height:50rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.info-price .new{
+  font-size: 34rpx;
+  color:#e64340;
+}
+.info-price .old{
+  font-size: 30rpx;
+  color:#98989f;
+  margin-left:4rpx;
+  text-decoration: line-through;
+}
+.info-price .discount{
+  display: inline-block;
+  width:100rpx;
+  height:50rpx;
+  margin-left:10%;
+  line-height:50rpx;
+  text-align: center;
+  font-size: 30rpx;
+  background-color: #e64340;
+  color:#fff;
+}
+.info-price .sale{
+  margin-left:240rpx;
+  color:#98989f;
+  font-size: 30rpx;
+}
+.info-top .service{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  font-size: 34rpx;
+  color:#96969f;
+}
+.serv-box{
+  display: inline-block;
+  margin-left:20rpx;
+}
+.serv-box .serv{
+  margin-left: 6rpx;
+}
+.info-mid{
+  margin-top:20rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+  width:100%;
+  font-size:34rpx;
+  color:#666;
+  background-color: #fff;
+  margin-bottom:20rpx;
+}
+.info-mid .color{
+  width:100%;
+  height:80rpx;
+  line-height: 80rpx;
+}
+.info-mid .color .col-box{
+  display: inline-block;
+  width: 100rpx;
+  height:60rpx;
+  line-height:60rpx;
+  margin-left:20rpx;
+  text-align: center;
+  border:1rpx solid #ccc;
+}
+.info-mid .size{
+  width:100%;
+  padding:20rpx 0;
+  box-sizing: border-box;
+  height:150rpx;
+}
+.info-mid .size .size-box{
+  display: inline-block;
+  width: 100rpx;
+  height:50rpx;
+  line-height:50rpx;
+  margin-left:20rpx;
+  text-align: center;
+  border:1rpx solid #ccc;
+}
+.info-mid .number{
+  font-size:30rpx;
+  width:100%;
+  height:70rpx;
+  line-height:70rpx;
+}
+.info-mid .number .num-handle{
+  display: inline-block;
+  width:140rpx;
+  height:40rpx;
+  line-height:40rpx;
+  margin-left:10rpx;
+  margin-right:20rpx;
+} 
+.info-mid .number .num-handle text{
+  height:40rpx;
+  line-height: 40rpx;
+  text-align:center;
+  display: inline-block;
+  border:1rpx solid #96969f;
+}
+.info-mid .number .num-handle .num{
+  border-left: none;
+  border-right: none;
+  width:60rpx;
+}
+.info-mid .number .num-handle .operate{
+  width:35rpx;
+}
+.info-mid .number .stock-title{
+  display: inline-block;
+  margin-right:10rpx;
+}
+.info-bottom{
+  width:100%;
+  background-color: #fff;
+}
+.info-bottom .shop-info{
+  width:100%;
+  padding:20rpx;
+  box-sizing: border-box;
+  height:150rpx;
+  margin-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.shop-info .logo{
+  display: inline-block;
+  width:100rpx;
+  height:100rpx;
+}
+.shop-info .logo image{
+  width:100%;
+  height:100%;
+}
+.shop-info .shop-desc{
+  display: inline-block;
+  margin-left: 30rpx;
+  width:400rpx;
+  height:130rpx;
+}
+.shop-desc .shop-name{
+  display: inline-block;
+  font-size: 36rpx;
+  height:70rpx;
+  line-height:70rpx;
+}
+.shop-desc .shop-slogan{
+  font-size:34rpx;
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  color:#76769f;
+  margin-top:0;
+}
+.info-bottom .nav{
+  width:100%;
+  height:130rpx;
+  line-height:130rpx;
+  display: flex;
+  justify-content: start;
+}
+.nav view{
+  flex:1;
+  text-align: center;
+  background-color: #ddd;
+}
+.nav .active{
+  background-color: #fff;
+}
+.picture_show{
+  width:100%;
+}
+.pic_box{
+  width:100%;
+  height:700rpx;
+  margin-top:20rpx;
+}
+.pic_box image{
+  width:100%;
+  height:100%;
+}
+.fixed-operate{
+  position: fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:110rpx;
+  display: flex;
+}
+.fixed-operate .short{
+  width:14%;
+  height:110rpx;
+  text-align: center;
+  font-size: 28rpx;
+  background-color: #ddd;
+}
+.fixed-operate .short image{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+}
+.fixed-operate .short text{
+  display: inline-block;
+  text-align: center;
+  width:100%;
+}
+.fixed-operate .long{
+  width:29%;
+  height:130rpx;
+  line-height: 130rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color:#fff;
+}
+.addtocart{
+  background-color: orange;
+}
+.buynow{
+  background-color: #e64340;
+}

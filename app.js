@@ -10,8 +10,7 @@ App({
    */
   onLaunch: function () {
     let that = this
-    // this.getUserInfo()
-
+    
     // 初次加载判断网络情况 无网络状态下根据实际情况进行调整
     wx.getNetworkType({
       success(res) {

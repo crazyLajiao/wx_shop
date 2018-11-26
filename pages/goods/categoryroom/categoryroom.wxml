@@ -30,7 +30,7 @@
         </block>
       </view>
       <view class='list-content' hidden="{{selectedId=='2000'?'':true}}">
-        <view class='content-item' wx:for="{{knitList}}" wx:key="id">
+        <view class='content-item' wx:for="{{knitList}}" wx:key="id" bindtap='goDetail'>
           <view class='item-img'><image src="{{item.img_url}}"></image></view>
           <view class='item-desc'>{{item.name}}</view>
           <view class='item-price'>
@@ -41,7 +41,7 @@
         </view>
       </view>
       <view class='list-content' hidden="{{selectedId=='2001'?'':true}}">
-        <view class='content-item' wx:for="{{flowerList}}" wx:key="id">
+        <view class='content-item' wx:for="{{flowerList}}" wx:key="id" bindtap='goDetail'>
           <view class='item-img'><image src="{{item.img_url}}"></image></view>
           <view class='item-desc'>{{item.name}}</view>
           <view class='item-price'>
@@ -52,7 +52,7 @@
         </view>
       </view>
       <view class='list-content' hidden="{{selectedId=='2002'?'':true}}">
-        <view class='content-item' wx:for="{{hoodieList}}" wx:key="id">
+        <view class='content-item' wx:for="{{hoodieList}}" wx:key="id" bindtap='goDetail'>
           <view class='item-img'><image src="{{item.img_url}}"></image></view>
           <view class='item-desc'>{{item.name}}</view>
           <view class='item-price'>
@@ -63,7 +63,7 @@
         </view>
       </view>
       <view class='list-brand' hidden="{{selectedId=='2003'?'':true}}">
-        <view class='brand-item' wx:for="{{brandList}}" wx:key="id">
+        <view class='brand-item' wx:for="{{brandList}}" wx:key="id" bindtap='goProductList'>
           <view class='brand-img'><image src="{{item.mobile_image_one}}"></image></view>
           <view class='brand-desc'>{{item.brand_discount}}{{item.brand_name}}</view>
         </view>

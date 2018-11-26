@@ -1,32 +1,29 @@
-// pages/user/order/order.js
+// pages/goods/productdetail/productdetail.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    selectedId:'all',
-    allOrder:[],
-    nopayOrder:[],
-    nodeliveryOrder:[],
-    noreceiveOrder:[],
-    nocommentOrder:[]
+    autoplay: true,
+    duration: 1000,
+    interval: 3000,
+    indicatorDots: true,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
-  goShopping(){
-    wx.switchTab({
-      url: '/pages/index/index',
-    })
-  },
-  click(e){
-    this.setData({
-      selectedId:e.target.id
+    wx.request({
+      url: app.globalData.api_url +'/goods/productdetail',
+      success:(res)=>{
+        let result = res.data.data
+        this.setData({
+          data:result
+        })
+      }
     })
   },
 

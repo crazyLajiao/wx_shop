@@ -35,6 +35,11 @@ Page({
       }
     })
   },
+  goDetail(){
+    wx.navigateTo({
+      url: '/pages/goods/productdetail/productdetail',
+    })
+  },
   // 升序
   incSortBy(attr) {
     return function (a, b) {

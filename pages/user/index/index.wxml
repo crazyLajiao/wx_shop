@@ -101,6 +101,6 @@
     -->
   </view>
 </view>
-<view>
+<view wx:else>
   <button class='redirect' bindtap='btnClick'>点击授权登录</button>
 </view>

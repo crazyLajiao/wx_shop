@@ -16,7 +16,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      userInfo: app.globalData.userInfo
+      userInfo: wx.getStorageSync('userInfo')
     })
   },
   btnClick(){
