@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/goods/productdetail/productdetail",
+    
     "pages/enter/enter",
     "pages/index/index",
     "pages/goods/index/index",
     "pages/goods/categoryroom/categoryroom",
     "pages/goods/productlist/productlist",
-   
+    "pages/goods/productdetail/productdetail",
     "pages/cart/index/index",
     "pages/user/phonenumber/phonenumber",
     "pages/user/index/index",
